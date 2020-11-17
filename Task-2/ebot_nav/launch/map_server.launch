@@ -1,0 +1,7 @@
+<launch>
+<arg name="map_file" default="$(find ebot_nav)/maps/sample_world.yaml"/>       <!-- path of map file -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" respawn="true">
+    <param name="frame_id" value="ebot_base"/>
+    </node>
+
+</launch>
