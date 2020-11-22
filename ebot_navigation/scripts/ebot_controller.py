@@ -29,7 +29,7 @@ if __name__ == '__main__':
     try:
         rospy.init_node('movebase_client_py')
         waypoints=[[-9.1,-1.2],[10.7,10.5],[12.6,-1.9],[18.2,-1.4],[-2,4]]
-        for i in range(1,5) :
+        for i in range(0,5) :
            result = movebase_client(waypoints[i][0],waypoints[i][1])
            if result:
             rospy.loginfo("Goal execution done!")
